@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  velocity-service:
+    build:
+      context: images/velocity
+    ports:
+      - 25565:25577
+    environment:
+      - EULA=TRUE
+      - CFG_FORWARDING_SECRET=this_is_a_secret
+
+  survival-service:
+    build:
+      context: images/1.17.1
+      target: fabric-1.17.1
+    environment:
+      - EULA=TRUE
+      - CFG_FORWARDING_SECRET=this_is_a_secret
+      - MODE=survival
+      - WHITELIST=maboesanman
+      - OPS=maboesanman
+
+  survival-laurel-service:
+    build:
+      context: images/1.17.1
+      target: fabric-1.17.1
+    environment:
+      - EULA=TRUE
+      - CFG_FORWARDING_SECRET=this_is_a_secret
+      - MODE=survival
+      - WHITELIST=maboesanman
+      - OPS=maboesanman
+
+  creative-service:
+    build:
+      context: images/1.17.1
+      target: carpet-1.17.1
+    environment:
+      - EULA=TRUE
+      - CFG_FORWARDING_SECRET=this_is_a_secret
+      - MODE=creative
+      - WHITELIST=maboesanman
+      - OPS=maboesanman

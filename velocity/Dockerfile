@@ -1,0 +1,7 @@
+FROM itzg/bungeecord AS Velocity
+ENV TYPE=VELOCITY
+ENV REPLACE_ENV_VARIABLES=TRUE
+ENV ENV_VARIABLE_PREFIX=CFG_
+
+COPY /config /config
+COPY /plugins /plugins
