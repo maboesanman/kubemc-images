@@ -3,7 +3,7 @@ version: "3.8"
 services:
   velocity-service:
     build:
-      context: images/velocity
+      context: velocity
     ports:
       - 25565:25577
     environment:
@@ -12,7 +12,7 @@ services:
 
   survival-service:
     build:
-      context: images/1.17.1
+      context: 1.17.1
       target: fabric-1.17.1
     environment:
       - EULA=TRUE
@@ -23,8 +23,8 @@ services:
 
   survival-laurel-service:
     build:
-      context: images/1.17.1
-      target: fabric-1.17.1
+      context: 1.18.1
+      target: fabric-1.18.1
     environment:
       - EULA=TRUE
       - CFG_FORWARDING_SECRET=this_is_a_secret
@@ -34,7 +34,7 @@ services:
 
   creative-service:
     build:
-      context: images/1.17.1
+      context: 1.17.1
       target: carpet-1.17.1
     environment:
       - EULA=TRUE

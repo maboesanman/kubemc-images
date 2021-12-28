@@ -14,6 +14,9 @@ ENV REPLACE_ENV_DURING_SYNC=TRUE
 ENV ENV_VARIABLE_PREFIX=CFG_
 
 COPY mods/FabricProxy-Lite-1.1.5.jar /mods/
+COPY mods/lithium-fabric-mc1.17.1-0.7.5.jar /mods/
+COPY mods/phosphor-fabric-mc1.17.x-0.8.0.jar /mods/
+
 COPY config/FabricProxy-Lite.toml /config/
 
 FROM fabric-1.17.1 AS carpet-1.17.1

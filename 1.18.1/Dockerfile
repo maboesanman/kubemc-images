@@ -13,7 +13,11 @@ ENV TZ=America/Chicago
 ENV REPLACE_ENV_DURING_SYNC=TRUE
 ENV ENV_VARIABLE_PREFIX=CFG_
 
+COPY mods/fabric-api-0.45.0+1.18.jar /mods/
 COPY mods/FabricProxy-Lite-1.1.6.jar /mods/
+COPY mods/lithium-fabric-mc1.18.1-0.7.6.jar /mods/
+COPY mods/phosphor-fabric-mc1.18.x-0.8.1.jar /mods/
+
 COPY config/FabricProxy-Lite.toml /config/
 
 FROM fabric-1.18.1 AS carpet-1.18.1
