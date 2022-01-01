@@ -12,8 +12,8 @@ services:
 
   survival-service:
     build:
-      context: 1.17.1
-      target: fabric-1.17.1
+      context: minecraft-server/1.17.1
+      target: minecraft-1.17.1-fabric
     environment:
       - EULA=TRUE
       - CFG_FORWARDING_SECRET=this_is_a_secret
@@ -23,8 +23,8 @@ services:
 
   survival-laurel-service:
     build:
-      context: 1.18.1
-      target: fabric-1.18.1
+      context: minecraft-server/1.18.1
+      target: minecraft-1.18.1-fabric
     environment:
       - EULA=TRUE
       - CFG_FORWARDING_SECRET=this_is_a_secret
@@ -34,8 +34,8 @@ services:
 
   creative-service:
     build:
-      context: 1.17.1
-      target: carpet-1.17.1
+      context: minecraft-server/1.17.1
+      target: minecraft-1.17.1-carpet
     environment:
       - EULA=TRUE
       - CFG_FORWARDING_SECRET=this_is_a_secret

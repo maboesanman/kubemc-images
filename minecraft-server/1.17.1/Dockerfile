@@ -1,4 +1,4 @@
-FROM itzg/minecraft-server AS fabric-1.17.1
+FROM itzg/minecraft-server AS minecraft-1.17.1-fabric
 
 ENV VERSION=1.17.1
 ENV USE_AIKAR_FLAGS=TRUE
@@ -19,6 +19,6 @@ COPY mods/phosphor-fabric-mc1.17.x-0.8.0.jar /mods/
 
 COPY config/FabricProxy-Lite.toml /config/
 
-FROM fabric-1.17.1 AS carpet-1.17.1
+FROM minecraft-1.17.1-fabric AS minecraft-1.17.1-carpet
 
 COPY mods/fabric-carpet-1.17.1-1.4.44+v210714.jar /mods/
